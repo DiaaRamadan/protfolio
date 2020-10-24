@@ -1,5 +1,6 @@
 @import 'variables';
 @import 'mixins';
+@import 'menu';
 
 
 *{
@@ -55,7 +56,7 @@ main{
             padding: 0.5rem; 
             &:hover{
                 color: $secondery-color;
-                @include ease-in-out('1.5s');
+                @include ease-in-out($ease-in-out);
             }
             
         }

@@ -1,0 +1,35 @@
+// menu-button
+.menu-btn{
+    position: absolute;
+    right: 35px;
+    top: 35px;
+    cursor: pointer;
+    @include ease-in-out($ease-in-out);
+    .btn-line{
+        width: 20px;
+        height: 3px;
+        background: #ffffff;
+        margin: 0 0 5px 0;
+        @include ease-in-out($ease-in-out);
+    }
+    &:hover{
+        .btn-line{
+            background: $secondery-color;
+        }
+    }
+    &.close{
+        transform: rotate(180deg);
+
+        .btn-line{
+            &:nth-child(1){
+                transform: rotate(45deg) translate(5px, 5px);
+            }
+            &:nth-child(2){
+                opacity: 0;
+            }
+            &:nth-child(3){
+                transform: rotate(-45deg) translate(7px, -6px);
+            }
+        }
+    }
+}
