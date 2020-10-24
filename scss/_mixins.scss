@@ -27,9 +27,42 @@
     z-index: -1;
 }
 
+// add prefixs to properties
 @mixin prefix($prop, $prefixes, $value) {
     #{$prop}: $value;
     @each $prefix in $prefixes {
         #{'-' + $prefix + '-' + $prop}: #{$value}
+    }
+}
+
+// media query for small diveces
+
+@mixin mediaSm {
+    @media screen and (max-width:500px){
+        @content;
+    }
+}
+
+// media query for medium diveces
+
+@mixin mediaMed {
+    @media screen and (max-width:768px){
+        @content;
+    }
+}
+
+// media query for large diveces
+
+@mixin mediaLg {
+    @media screen and (min-width:769px) and (max-width: 1170px){
+        @content;
+    }
+}
+
+// media query for large diveces
+
+@mixin mediaXl {
+    @media screen and (min-width:1171px){
+        @content;
     }
 }
