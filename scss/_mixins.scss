@@ -1,6 +1,7 @@
 // transition mixin
 @mixin ease-in-out($time) {
-    transition: all #{$time} ease-in-out;
+    
+    @include prefix('transition', (webkit,o,moz), all #{$time} ease-in-out);
 }
 
 // control in the background display
@@ -24,4 +25,11 @@
     height: 100%;
     background-color: rgba($color, $background-opacity);
     z-index: -1;
+}
+
+@mixin prefix($prop, $prefixes, $value) {
+    #{$prop}: $value;
+    @each $prefix in $prefixes {
+        #{'-' + $prefix + '-' + $prop}: #{$value}
+    }
 }
