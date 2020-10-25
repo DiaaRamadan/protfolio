@@ -1,7 +1,7 @@
 @import 'variables';
 @import 'mixins';
 @import 'menu';
-
+@import 'about';
 
 
 *{
@@ -10,7 +10,7 @@
     margin: 0;
 }
 body{
-    color: #ffffff;
+    color: set-text-color($primary-color);
     background: $primary-color;
     height: 100%;
     line-height: 1.5;
@@ -49,11 +49,11 @@ header{
 main{
     
     padding: 4rem;
-    height: 100%;
+    min-height: calc(100vh - 60px);
     .icons{
         margin-top: 1rem;
         a{
-            color: #ffffff;
+            color: set-text-color($primary-color);
             padding: 0.5rem; 
             &:hover{
                 color: $secondery-color;
@@ -71,8 +71,14 @@ main{
     }
 }
 
-
-
+footer#main-footer{
+    width: 100%;
+    text-align: center;
+    color: set-text-color($primary-color);
+    background: #000;
+    padding: 1rem;
+    height: 60px;
+}
 
 
 
