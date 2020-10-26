@@ -3,17 +3,19 @@
     grid-gap: 20px;
     grid-template-columns: repeat(3, 1fr);
     color: set-text-color($primary-color);
-    img{
-        width: 100%;
-        border: 1px solid #fff;
-
-        &:hover{
-            opacity: 0.5;
-            @include ease-in-out($ease-in-out);
-            border-color: $secondery-color;
+     
+    .item{
+        img{
+            width: 100%;
+            border: 1px solid #fff;
+            &:hover{
+                opacity: 0.5;
+                @include ease-in-out($ease-in-out);
+                border-color: $secondery-color;
+            }
         }
-    }
-    a{
-        color: set-text-color($primary-color); 
+        a{
+            color: set-text-color($primary-color); 
+        }
     }
 }
