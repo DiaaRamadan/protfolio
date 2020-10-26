@@ -1,8 +1,9 @@
 @import 'variables';
 @import 'mixins';
+@import 'components';
 @import 'menu';
 @import 'about';
-
+@import 'work';
 
 *{
     box-sizing: border-box;
@@ -17,7 +18,7 @@ body{
 
     @include background-control();
     .overlay{
-    @include overlay($primary-color);
+        @include overlay($primary-color);
     }
 }
 
